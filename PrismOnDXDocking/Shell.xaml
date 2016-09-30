@@ -81,6 +81,11 @@
                     <dxdo:LayoutPanel prism:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.DefaultViewRegion}" Caption="DefaultView" AllowClose="False" AllowDrag="False"/>
                 </dxdo:TabbedGroup>
             </dxdo:LayoutGroup>
+            <dxdo:DockLayoutManager.FloatGroups>
+                <dxdo:FloatGroup DestroyOnClosingChildren="False" prism:RegionManager.RegionName="{x:Static Infrastructure:RegionNames.FloatingRegion}">
+                    
+                </dxdo:FloatGroup>
+            </dxdo:DockLayoutManager.FloatGroups>
         </dxdo:DockLayoutManager>
     </dxb:BarManager>
 </dxcore:DXWindow>

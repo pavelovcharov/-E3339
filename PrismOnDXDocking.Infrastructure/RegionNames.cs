@@ -31,5 +31,6 @@ namespace PrismOnDXDocking.Infrastructure {
 		public const string MainRegion = "MainRegion";
 		public const string DefaultViewRegion = "DefaultViewRegion";
 		public const string TabRegion = "TabRegion";
+        public const string FloatingRegion = "FloatingRegion";
     }
 }

@@ -51,6 +51,7 @@ namespace PrismOnDXDocking {
             mappings.RegisterMapping(typeof(LayoutPanel), Container.GetExportedValue<LayoutPanelAdapter>());
             mappings.RegisterMapping(typeof(LayoutGroup), Container.GetExportedValue<LayoutGroupAdapter>());
             mappings.RegisterMapping(typeof(DocumentGroup), Container.GetExportedValue<DocumentGroupAdapter>());
+            mappings.RegisterMapping(typeof(FloatGroup), Container.GetExportedValue<FloatGroupAdapter>());
             //mappings.RegisterMapping(typeof(TabbedGroup), Container.GetExportedValue<TabbedGroupAdapter>());
             return mappings;
 		}

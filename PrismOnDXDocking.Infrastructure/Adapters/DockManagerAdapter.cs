@@ -43,7 +43,7 @@ namespace PrismOnDXDocking.Infrastructure.Adapters {
 			BaseLayoutItem[] items = regionTarget.GetItems();
             foreach(BaseLayoutItem item in items) {
                 string regionName = RegionManager.GetRegionName(item);
-                if(!String.IsNullOrEmpty(regionName)) {
+                if(!string.IsNullOrEmpty(regionName)) {
                     LayoutPanel panel = item as LayoutPanel;
                     if(panel != null && panel.Content == null) {
                         ContentControl control = new ContentControl();

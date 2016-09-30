@@ -43,7 +43,8 @@ namespace PrismOnDXDocking.ExampleModule {
 		private readonly DelegateCommand showProperties;
 		private readonly DelegateCommand showToolbox;
 		private readonly DelegateCommand newDocument;
-		[ImportingConstructor]
+        private readonly DelegateCommand newFloatingDocument;
+        [ImportingConstructor]
         public ExampleModule(IRegionManager regionManager, IMenuService menuService) {
 			this.regionManager = regionManager;
             this.menuService = menuService;
@@ -51,7 +52,8 @@ namespace PrismOnDXDocking.ExampleModule {
             this.showProperties = new DelegateCommand(ShowProperties);
             this.showToolbox = new DelegateCommand(ShowToolbox);
             this.newDocument = new DelegateCommand(AddNewDocument);
-		}
+            this.newFloatingDocument = new DelegateCommand(AddNewFloatingDocument);
+        }
         public void Initialize() {
             regionManager.RegisterViewWithRegion(RegionNames.DefaultViewRegion, typeof(DefaultView));
 
@@ -63,6 +65,7 @@ namespace PrismOnDXDocking.ExampleModule {
             menuService.Add(new MenuItem() { Command = showProperties, Parent = "View", Title = "Properties Window"});
             menuService.Add(new MenuItem() { Command = showToolbox, Parent = "View", Title = "Toolbox"});
             menuService.Add(new MenuItem() { Command = newDocument, Parent = "File", Title = "New"});
+            menuService.Add(new MenuItem() { Command = newFloatingDocument, Parent = "File", Title = "New Floating Document" });
         }
 
 		void ShowOutput() {
@@ -77,5 +80,8 @@ namespace PrismOnDXDocking.ExampleModule {
 		void AddNewDocument() {
 			regionManager.AddToRegion(RegionNames.MainRegion, ServiceLocator.Current.GetInstance<DocumentView>());
 		}
+        void AddNewFloatingDocument() {
+            regionManager.AddToRegion(RegionNames.FloatingRegion, ServiceLocator.Current.GetInstance<DocumentView>());
+        }
 	}
 }
