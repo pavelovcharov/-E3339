@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="PrismOnDXDocking.ExampleModule.Views.DocumentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <FlowDocumentPageViewer ScrollViewer.VerticalScrollBarVisibility="Hidden" Zoom="1">
+            <FlowDocument FontFamily="Segoue" PagePadding="24" FontStyle="Italic">
+                <Paragraph FontSize="24">
+                    DevExpress WPF Docking
+                </Paragraph>
+                <Paragraph>
+                    DXDocking is the docking library for the Windows Presentation Framework. Developed from the ground up, it brings you complete docking features, strengthened by the WPF technology. Whenever your end-users want to perform any dock operation, they can do this with ease, using helpful hints and intuitive UI.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentPageViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="PrismOnDXDocking.ExampleModule.Views.ToolBoxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" 
+             xmlns:dxnb="http://schemas.devexpress.com/winfx/2008/xaml/navbar">
+    <Grid>
+        <dxnb:NavBarControl Name="navBar" Margin="3">
+            <dxnb:NavBarControl.Groups>
+                <dxnb:NavBarGroup Header="Common">
+                    <dxnb:NavBarItem Content="Control"  />
+                    <dxnb:NavBarItem Content="CheckBox" />
+                    <dxnb:NavBarItem Content="Label"  />
+                    <dxnb:NavBarItem Content="Panel"  />
+                    <dxnb:NavBarItem Content="Image" />
+                </dxnb:NavBarGroup>
+                <dxnb:NavBarGroup Header="Controls" IsExpanded="False">
+                    <dxnb:NavBarItem Content="Canvas"  />
+                    <dxnb:NavBarItem Content="Chart"  />
+                    <dxnb:NavBarItem Content="RichText"  />
+                    <dxnb:NavBarItem Content="Grid"  />
+                </dxnb:NavBarGroup>
+                <dxnb:NavBarGroup Header="General">
+                    <dxnb:NavBarItem Content="Line" />
+                    <dxnb:NavBarItem Content="Shape" />
+                </dxnb:NavBarGroup>
+            </dxnb:NavBarControl.Groups>
+        </dxnb:NavBarControl>
+    </Grid>
+</UserControl>
